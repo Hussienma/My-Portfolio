@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="app.js"></script>
+    <script
+      src="https://kit.fontawesome.com/5daa8eb347.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.js"
+      integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="modals">
+        <div class="modal" id="messaging-modal">
+          <div class="modal-header">
+            <div class="title">Messaging App</div>
+            <button data-close-button class="close-button">&times;</button>
+          </div>
+          <div class="modal-img">
+            <img src="images/1.png" />
+          </div>
+          <div class="modal-body">
+            <p>
+              &emsp;This is an app created by me from scratch. It was created
+              using Nodejs, Expressjs, Reactjs, Redux and MongoDB. It has the
+              features:
+            </p>
+            <ul>
+              <li>Authentication with JsonWebToken</li>
+              <li>Customizable profiles with images</li>
+              <li>Live chat rooms</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <a
+              target="_blank"
+              href="https://messaging-app-by-hussienmahba.onrender.com/"
+              class="btn btn-primary"
+            >
+              Visit <i class="fa fa-external-link"></i>
+            </a>
+          </div>
+        </div>
+        <div class="modal" id="car-workshop-modal">
+          <div class="modal-header">
+            <div class="title">Car Workshop CRM</div>
+            <button data-close-button class="close-button">&times;</button>
+          </div>
+          <div class="modal-img">
+            <img src="images/2.png" />
+          </div>
+          <div class="modal-body">
+            <p>
+              &emsp;This is a CRM system for managing a car workshop werehouse.
+              It was created using React, Nodejs, Express, MySQL. I was in
+              charge of the backend and I implemented the features:
+            </p>
+            <ul>
+              <li>JWT authentication with user roles</li>
+              <li>CRUD operations with MySQL</li>
+              <li>Created documentation for the project</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="modal" id="porsay-modal">
+          <div class="modal-header">
+            <div class="title">Porsay</div>
+            <button data-close-button class="close-button">&times;</button>
+          </div>
+          <div class="modal-img">
+            <img src="images/3.png" />
+          </div>
+          <div class="modal-body">
+            <p>
+              &emsp;Porsay is one of the top parcel forwarding companies (number
+              1 in the Middle East), with over 50k monthly visitors. I am in
+              charge of the fixing various UI/UX bugs.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <a
+              target="_blank"
+              href="https://www.porsay.com/"
+              class="btn btn-primary"
+            >
+              Visit <i class="fa fa-external-link"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div id="overlay"></div>
+      <section class="landing">
+        <div class="wrapper">
+          <h1>Hussien M. Abbas</h1>
+          <div class="static-txt">I'm</div>
+          <ul class="dynamic-txts">
+            <li><span>A Developer</span></li>
+            <li><span>A Designer</span></li>
+            <li><span>An Innovator</span></li>
+          </ul>
+          <button
+            onclick="document.getElementById('contacts').scrollIntoView()"
+            type="button"
+            class="btn btn-primary"
+          >
+            Contact Me
+          </button>
+        </div>
+        <img src="programer.png" alt="" />
+      </section>
+
+      <!-- TODO: Add about section -->
+      <section class="about">
+        <div class="about-img hidden">
+          <img src="programmer-2.png" alt="" />
+        </div>
+        <div class="about-txt">
+          <h3>About Me</h3>
+          <p class="hidden">
+            I'm a full-stack web developer with 2+ years of experience with
+            React and Nodejs. I specialize in developing web applications using
+            React and Nodejs. I have a good understanding of MERN stack and
+            Vuejs
+          </p>
+        </div>
+      </section>
+
+      <!-- TODO: Add Projects section -->
+      <section class="projects">
+        <div class="project-heading">
+          <span>Check out my work</span>
+          <h3>My Projects</h3>
+        </div>
+        <ul class="project-filter">
+          <li class="list project-filter-active" data-filter="all">All</li>
+          <li class="list" data-filter="created">Created</li>
+          <li class="list" data-filter="worked">Worked on</li>
+        </ul>
+
+        <div class="project-container">
+          <a data-modal-target="#messaging-modal" class="project-box created">
+            <img src="images/1.png" />
+            <span>Messaging app</span></a
+          >
+          <a class="project-box worked" data-modal-target="#car-workshop-modal">
+            <img src="images/2.png" /> <span>Car Workshop CRM</span>
+          </a>
+          <a class="project-box worked" data-modal-target="#porsay-modal">
+            <img src="images/3.png" /> <span>Porsay</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="technologies">
+        <section class="logos">
+          <h2 class="center-txt">Technologies:</h2>
+          <div class="logo hidden" style="--order: 1">
+            <img src="icons/1.png" alt="" />
+          </div>
+          <div class="logo hidden" style="--order: 2">
+            <img src="icons/2.png" alt="" />
+          </div>
+          <div class="logo hidden" style="--order: 3">
+            <img src="icons/3.png" alt="" />
+          </div>
+          <div class="logo hidden" style="--order: 4">
+            <img src="icons/4.png" alt="" />
+          </div>
+          <div class="logo hidden" style="--order: 5">
+            <img src="icons/5.png" alt="" />
+          </div>
+          <div class="logo hidden" style="--order: 1">
+            <img src="icons/6.png" alt="" />
+          </div>
+          <div class="logo hidden" style="--order: 2">
+            <img src="icons/7.png" alt="" />
+          </div>
+          <div class="logo hidden" style="--order: 3">
+            <img src="icons/8.png" alt="" />
+          </div>
+          <div class="logo hidden" style="--order: 4">
+            <img src="icons/9.png" alt="" />
+          </div>
+          <div class="logo hidden" style="--order: 5">
+            <img src="icons/10.png" alt="" />
+          </div>
+          <h4 class="hidden center-txt" style="--order: 6">And much more...</h4>
+        </section>
+      </section>
+
+      <section id="contacts" class="four">
+        <h2 class="center-txt">How to reach me</h2>
+        <a
+          href="https://www.linkedin.com/in/hussien-abbas/"
+          target="_blank"
+          class="social-icon linkedin"
+          ><i class="fa fa-linkedin"></i
+        ></a>
+        <a
+          href="https://github.com/hussienma"
+          target="_blank"
+          class="social-icon"
+          ><i class="fa fa-github"></i
+        ></a>
+        <div class="social-icon">
+          <i class="fa fa-envelope orange"></i>
+          <p class="center-txt">hussienmahba@gmail.com</p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
